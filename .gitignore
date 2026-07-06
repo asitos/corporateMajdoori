@@ -1,4 +1,8 @@
-./build
-test
+*
 
-*.o
+!*/
+# blocking the compiled binaries on my local folder 
+!*.cpp
+!*.sh
+!*.md
+!.gitignore
