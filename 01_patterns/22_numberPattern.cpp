@@ -23,7 +23,7 @@ public:
 
 int main() {
   Solution obj;
-  int n = 4;
+  int n = 3;
 
   obj.printPattern(n);
   return 0;
