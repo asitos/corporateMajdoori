@@ -10,3 +10,4 @@ im not dying unemployed gang
 ---
 ### solved problems
 * [1: visual patterns & logic](./01_patterns)
+* [2: basic maths](./02_basic_maths/)
