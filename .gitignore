@@ -6,4 +6,5 @@
 !*.cpp
 !*.sh
 !*.md
+!*.lua
 !.gitignore
