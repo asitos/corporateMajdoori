@@ -11,3 +11,4 @@ im not dying unemployed gang
 ### solved problems
 * [1: visual patterns & logic](./01_patterns)
 * [2: basic maths](./02_basic_maths/)
+* [3: basic recursion](./03_basic_recursion/)
