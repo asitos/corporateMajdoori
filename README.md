@@ -13,6 +13,7 @@ im not dying unemployed gang
 * [2: basic maths](./02_basic_maths/)
 * [3: basic recursion](./03_basic_recursion/)
 * [4: basic hashing](./04_basic_hashing/)
+* [5: sorting](./05_sorting/)
 
 ---
 
