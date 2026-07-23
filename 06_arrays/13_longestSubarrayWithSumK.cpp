@@ -6,24 +6,24 @@ public:
   int longestSubarrayWithSumK(vector<int>& nums, int k) {
     int n = nums.size();
     // edge case
-    if (n < 1) return 0;
+    if (n == 0) return 0;
 
-    int res = 0;
-    int windowSum = 0;
-    int i = 0;
+    int currSum = 0, res = 0;
+    unordered_map<int, int> mp;
 
-    for (int j = 0; j < n; j++) {
-      windowSum += nums[j];
-      while (windowSum > k && i <= j) {
-        windowSum -= nums[i];
-        i++;
+    for (int i = 0; i < n; i++) {
+      currSum += nums[i];
+      if (currSum == k) {
+        res = i + 1;
       }
 
-      if (windowSum == k) {
-        res = max(res, j - i + 1);
+      if (mp.find(currSum) != mp.end()) {
+        res = max(res, i - mp[currSum]);
+      } else {
+        mp[currSum] = i;
       }
     }
-     
+
     return res;
   }
 };
