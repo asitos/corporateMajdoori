@@ -14,8 +14,11 @@ im not dying unemployed gang
 * [3: basic recursion](./03_basic_recursion/)
 * [4: basic hashing](./04_basic_hashing/)
 * [5: sorting](./05_sorting/)
+* [6: arrays](./06_arrays/)
 
 ---
 
 * [leetcode problems](./leetcode/)
+* [codeforces problems](./codeforces/problems/)
+* [codeforces contests](./codeforces/contests/)
 
