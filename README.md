@@ -20,4 +20,5 @@ im not dying unemployed gang
 
 * [leetcode problems](./leetcode/)
 * [cses problems](./cses/)
+* [gfg problems](./gfg/)
 
