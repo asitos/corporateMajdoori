@@ -23,25 +23,43 @@ public:
     return countSubsetWithSum(nums, target, n);
   }
 
+  // 2d tabulation
+  // int countSubsetWithSum(vector<int> &nums, int sum, int n) {
+  // initialise table
+  // vector<vector<int>> dp(n + 1, vector<int>(sum + 1, 0));
+  // dp[0][0] = 1; // 0 sum is always possible
+  // for (int j = 1; j <= sum; j++) {
+  //   dp[0][j] = 0; // 0 elements cannot form any sum > 0
+  // }
+  //
+  // // choice
+  // for (int i = 1; i <= n; i++) {
+  //   for (int j = 0; j <= sum; j++) {
+  //     if (nums[i - 1] <= j) {
+  //       dp[i][j] = dp[i - 1][j] + dp[i - 1][j - nums[i - 1]];
+  //     } else {
+  //       dp[i][j] = dp[i - 1][j];
+  //     }
+  //   }
+  // }
+  // return dp[n][sum];
+  //
+  //}
+  //
+  // optimal 1d Solution
+  //
   int countSubsetWithSum(vector<int> &nums, int sum, int n) {
-    // initialise table
-    vector<vector<int>> dp(n + 1, vector<int>(sum + 1, 0));
-    dp[0][0] = 1; // 0 sum is always possible
-    for (int j = 1; j <= sum; j++) {
-      dp[0][j] = 0; // 0 elements cannot form any sum > 0
-    }
+    int dp[sum + 1];
+    memset(dp, 0, sizeof(dp));
+    dp[0] = 1;
 
-    // choice
-    for (int i = 1; i <= n; i++) {
-      for (int j = 0; j <= sum; j++) {
-        if (nums[i - 1] <= j) {
-          dp[i][j] = dp[i - 1][j] + dp[i - 1][j - nums[i - 1]];
-        } else {
-          dp[i][j] = dp[i - 1][j];
-        }
+    for (int i = 0; i < n; i++) {
+      for (int j = sum; j >= nums[i]; j--) {
+        dp[j] = dp[j] + dp[j - nums[i]];
       }
     }
-    return dp[n][sum];
+
+    return dp[sum];
   }
 };
 
