@@ -4,7 +4,7 @@ using namespace std;
 class Solution {
 public:
   void printNToOne(int curr) {
-    // forward recursion O(n) 
+    // forward recursion O(n)
     // if (curr < 1) {
     //   return;
     // }
@@ -12,18 +12,18 @@ public:
     // cout << curr << " ";
     // printNToOne(curr - 1);
     //
-    // backtracking O(n) 
+    // backtracking O(n)
     if (curr < 1) {
       return;
     }
-    printNToOne(curr - 1);
     cout << curr << " ";
+    printNToOne(curr - 1);
   }
 };
 
 int main() {
   Solution obj;
-  int n = 10;
+  int n = 5;
   obj.printNToOne(n);
 
   return 0;

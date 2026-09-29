@@ -4,16 +4,20 @@ using namespace std;
 class Solution {
 public:
   int printFibonacci(int n) {
-    // base case 
+    // base case
     if (n <= 1) {
       return n;
     }
 
-    int a = printFibonacci(n - 1);
-    int b = printFibonacci(n - 2);
- 
-    return b + a;
+    // dp table initialisation
+    int dp[n + 1];
+    memset(dp, -1, sizeof(dp));
 
+    if (dp[n] != -1) {
+      return dp[n];
+    }
+
+    return dp[n] = printFibonacci(n - 1) + printFibonacci(n - 2);
   }
 };
 
@@ -24,4 +28,3 @@ int main() {
 
   return 0;
 }
-
