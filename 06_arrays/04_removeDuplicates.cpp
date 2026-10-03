@@ -3,10 +3,11 @@ using namespace std;
 
 class Solution {
 public:
-  vector<int> removeDuplicates(vector<int>& nums) {
+  vector<int> removeDuplicates(vector<int> &nums) {
     // edge case
-    if (nums.size() <= 1) return nums;
-     
+    if (nums.size() <= 1)
+      return nums;
+
     int i = 0, j = 1;
     for (int j = 1; j < nums.size(); j++) {
       if (nums[j] != nums[i]) {
@@ -14,7 +15,7 @@ public:
         nums[i] = nums[j];
       }
     }
-    
+
     return nums;
   }
 };

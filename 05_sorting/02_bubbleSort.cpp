@@ -3,9 +3,9 @@ using namespace std;
 
 class Solution {
 public:
-  vector<int> bubbleSort(vector<int>& nums) {
+  vector<int> bubbleSort(vector<int> &nums) {
     for (int i = nums.size() - 1; i >= 0; i--) {
-      int didSwap = 0;  // check for array swap
+      int didSwap = 0; // check for array swap
       for (int j = 0; j < i; j++) {
         if (nums[j] > nums[j + 1]) {
           swap(nums[j], nums[j + 1]);
@@ -18,7 +18,7 @@ public:
         break;
       }
     }
-    
+
     return nums;
   }
 };
